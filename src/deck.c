@@ -1,7 +1,8 @@
+#include <stdio.h>
 #include "deck.h"
 #include "card.h"
 
-void generate_deck(struct Card *deck[TOTAL_DECK]) {
+void generate_deck(struct Card deck[TOTAL_DECK]) {
 
     /* Generate all suits and numbers */
     int i = 0;
@@ -12,14 +13,14 @@ void generate_deck(struct Card *deck[TOTAL_DECK]) {
             struct Card card;
             card.suit = suit;
             card.number = number;
-            *deck[i] = card;
+            deck[i] = card;
             i++;
         }
     }
 }
 
-void format_deck(struct Card *deck[TOTAL_DECK]) {
+void format_deck(struct Card deck[TOTAL_DECK]) {
     for (int i=0; i < TOTAL_DECK; i++) {
-        printf("%d => %s of %s\n", i, get_formatted_number(*deck[i].number), get_suit_symbol(*deck[i].suit));
+        printf("%d => %s of %s\n", i, get_formatted_number(deck[i].number), get_suit_symbol(deck[i].suit));
     }
 }

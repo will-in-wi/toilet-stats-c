@@ -6,7 +6,7 @@
 
 #define TOTAL_DECK 52
 
-void generate_deck(struct Card *deck[TOTAL_DECK]);
-void format_deck(struct Card *deck[TOTAL_DECK]);
+void generate_deck(struct Card deck[TOTAL_DECK]);
+void format_deck(struct Card deck[TOTAL_DECK]);
 
 #endif  /* INC_DECK_H */

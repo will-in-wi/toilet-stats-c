@@ -28,9 +28,9 @@
 
 int main() {
     struct Card deck[TOTAL_DECK];
-    generate_deck(&deck);
+    generate_deck(deck);
 
-    format_deck(&deck);
+    format_deck(deck);
 
     return 0;
 }

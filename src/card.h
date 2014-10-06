@@ -5,7 +5,7 @@
 
 #define TOTAL_NUMBERS 13
 
-char get_formatted_number(int number);
+char * get_formatted_number(int number);
 
 struct Card {
     enum Suit suit;
