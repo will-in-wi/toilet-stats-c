@@ -63,3 +63,24 @@ int count_deck(struct Card deck[TOTAL_DECK]) {
 
     return count;
 }
+
+struct Card shift_first_card(struct Card deck[TOTAL_DECK]) {
+    struct Card first_card;
+
+    first_card = deck[0];
+
+    for (int i = 0; i < TOTAL_DECK-1; ++i) {
+        deck[i] = deck[i+1]
+    }
+
+    return first_card;
+}
+
+int last_card_index(struct Card deck[TOTAL_DECK]) {
+    // TODO: Do something intelligent with a binary search.
+    for (int i = 0; i < TOTAL_DECK; ++i) {
+        if (deck[i] == NULL) return i-1;
+    }
+
+    return NULL;
+}

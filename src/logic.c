@@ -69,7 +69,7 @@ int game_round(struct Card unused_cards[TOTAL_DECK], struct Card working_deck[TO
     // Add cards until the deck has at least 4.
     do {
         // TODO: Figure out how to grab the shifted card.
-        working_deck[] = array_shift(unused_cards);
+        working_deck[last_card_index(working_deck)] = shift_first_card(unused_cards);
     } while (count_deck(working_deck) < 4 && count_deck(unused_cards) > 0);
 
 
