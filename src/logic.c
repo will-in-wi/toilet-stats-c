@@ -13,8 +13,8 @@ int check_same_number(struct Card working_deck[TOTAL_DECK]) {
     }
 
     int last_index = count_deck(working_deck) - 1;
-    int top_card = working_deck[last_index];
-    int fourth_card = working_deck[last_index - 3];
+    struct Card top_card = working_deck[last_index];
+    struct Card fourth_card = working_deck[last_index - 3];
 
     // Check for same number four cards back.
     if (top_card.number == fourth_card.number {
@@ -35,8 +35,8 @@ int check_same_suit(struct Card working_deck[TOTAL_DECK]) {
     }
 
     int last_index = count_deck(working_deck) - 1;
-    int top_card = working_deck[last_index];
-    int fourth_card = working_deck[last_index - 3];
+    struct Card top_card = working_deck[last_index];
+    struct Card fourth_card = working_deck[last_index - 3];
 
     // Check for the same suit four cards back.
     if (top_card.suit == fourth_card.suit) {
