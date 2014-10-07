@@ -66,8 +66,8 @@ int game_round(struct Card unused_cards[TOTAL_DECK], struct Card working_deck[TO
     // Play a round.
     int did_stuff = TRUE;
     while (did_stuff == TRUE) {
-        int same_number = check_same_number();
-        int same_suit = check_same_suit();
+        int same_number = check_same_number(working_deck);
+        int same_suit = check_same_suit(working_deck);
 
         // This syntax might not work.
         did_stuff = (same_suit || same_number);
