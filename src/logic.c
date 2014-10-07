@@ -5,7 +5,8 @@
 #include "card.h"
 
 void discard_card(struct Card working_deck[TOTAL_DECK], int i) {
-    working_deck[i] = NULL;
+    struct Card null_card;
+    working_deck[i] = null_card;
 }
 
 int check_same_number(struct Card working_deck[TOTAL_DECK]) {

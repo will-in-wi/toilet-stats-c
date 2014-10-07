@@ -57,8 +57,9 @@ void shuffle_deck(struct Card deck[TOTAL_DECK]) {
 
 int count_deck(struct Card deck[TOTAL_DECK]) {
     int count = 0;
+    struct Card null_card;
     for (int i = 0; i < TOTAL_DECK; ++i) {
-        if (deck[i] != NULL) count++;
+        if (deck[i].number != null_card.number) count++;
     }
 
     return count;
@@ -70,7 +71,7 @@ struct Card shift_first_card(struct Card deck[TOTAL_DECK]) {
     first_card = deck[0];
 
     for (int i = 0; i < TOTAL_DECK-1; ++i) {
-        deck[i] = deck[i+1]
+        deck[i] = deck[i+1];
     }
 
     return first_card;
@@ -78,9 +79,10 @@ struct Card shift_first_card(struct Card deck[TOTAL_DECK]) {
 
 int last_card_index(struct Card deck[TOTAL_DECK]) {
     // TODO: Do something intelligent with a binary search.
+    struct Card null_card;
     for (int i = 0; i < TOTAL_DECK; ++i) {
-        if (deck[i] == NULL) return i-1;
+        if (deck[i].number == null_card.number) return i-1;
     }
 
-    return NULL;
+    return -1;
 }
