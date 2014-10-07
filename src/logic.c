@@ -39,7 +39,7 @@ int check_same_suit(struct Card working_deck[TOTAL_DECK]) {
     int fourth_card = working_deck[last_index - 3];
 
     // Check for the same suit four cards back.
-    if ($top_card->get_suit() === $fourth_card->get_suit()) {
+    if (top_card.suit == fourth_card.suit) {
         // Pull the last four cards and discard them.
         discard_card(working_deck, last_index-1);
         discard_card(working_deck, last_index-2);
