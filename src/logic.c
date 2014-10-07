@@ -23,11 +23,6 @@ int check_same_number(struct Card working_deck[TOTAL_DECK]) {
         discard_card(working_deck, last_index-1);
         discard_card(working_deck, last_index-2);
         discard_card(working_deck, last_index-3);
-
-        // Clean up key numbering
-        // TODO: This might be tricky... It makes sure that the indexes get reset.
-        // Might be a PHP only thing.
-        working_deck = array_values(working_deck);
         return TRUE;
     }
 
@@ -48,11 +43,6 @@ int check_same_suit(struct Card working_deck[TOTAL_DECK]) {
         // Pull the last four cards and discard them.
         discard_card(working_deck, last_index-1);
         discard_card(working_deck, last_index-2);
-
-        // Clean up key numbering
-        // TODO: This might be tricky... It makes sure that the indexes get reset.
-        // Might be a PHP only thing.
-        working_deck = array_values(working_deck);
         return TRUE;
     }
 
