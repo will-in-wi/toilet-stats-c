@@ -17,7 +17,7 @@ int check_same_number(struct Card working_deck[TOTAL_DECK]) {
     struct Card fourth_card = working_deck[last_index - 3];
 
     // Check for same number four cards back.
-    if (top_card.number == fourth_card.number {
+    if (top_card.number == fourth_card.number) {
         // Pull the last four cards and discard them.
         discard_card(working_deck, last_index);
         discard_card(working_deck, last_index-1);
