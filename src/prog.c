@@ -30,6 +30,8 @@ int main() {
     struct Card deck[TOTAL_DECK];
     generate_deck(deck);
 
+    shuffle_deck(deck);
+
     format_deck(deck);
 
     return 0;
