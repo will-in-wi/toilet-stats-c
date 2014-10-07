@@ -1,38 +1,26 @@
 #import <stdio.h>
 #import "suit.h"
 #import "deck.h"
+#import "util.h"
 
 #define DECKS 1
 
-// int play_game() {
-//     $deck = array();
-//     for ($i=0; $i < $decks; $i++) {
-//         $deck1 = \ToiletStats\Cards\Deck::generate();
-//         $deck = array_merge($deck, $deck1);
-//     }
-
-//     // Shuffle deck(s)
-//     shuffle($deck);
-
-//     $game = new \ToiletStats\Logic\Toilet($deck);
-
-//     $playing = true;
-//     while ($playing === true) {
-//         $playing = $game->round();
-
-//         // Deck::format($game->get_deck());
-//     }
-
-//     return count($game->get_deck());
-// }
-
 int main() {
-    struct Card deck[TOTAL_DECK];
-    generate_deck(deck);
+    struct Card unused_cards[TOTAL_DECK];
+    struct Card working_deck[TOTAL_DECK];
 
-    shuffle_deck(deck);
+    generate_deck(unused_cards);
+    shuffle_deck(unused_cards);
+    format_deck(unused_cards);
 
-    format_deck(deck);
+    int playing = TRUE;
+    while (playing == TRUE) {
+        playing = game_round(unused_cards, working_deck);
 
-    return 0;
+        format_deck(working_deck);
+    }
+
+    printf("Final count: %d\n", count(working_deck));
+
+    return 1;
 }
