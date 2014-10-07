@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "logic.h"
 #include "util.h"
 #include "deck.h"
