@@ -2,6 +2,7 @@
 #import "suit.h"
 #import "deck.h"
 #import "util.h"
+#import "logic.h"
 
 #define DECKS 1
 
