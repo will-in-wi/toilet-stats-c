@@ -8,11 +8,11 @@ void discard_card(struct Card working_deck[TOTAL_DECK], int i) {
 }
 
 int check_same_number(struct Card working_deck[TOTAL_DECK]) {
-    if (count(working_deck) < 4) {
+    if (count_deck(working_deck) < 4) {
         return FALSE;
     }
 
-    int last_index = count(working_deck) - 1;
+    int last_index = count_deck(working_deck) - 1;
     int top_card = working_deck[last_index];
     int fourth_card = working_deck[last_index - 3];
 
@@ -35,11 +35,11 @@ int check_same_number(struct Card working_deck[TOTAL_DECK]) {
 }
 
 int check_same_suit(struct Card working_deck[TOTAL_DECK]) {
-    if (count(working_deck) < 4) {
+    if (count_deck(working_deck) < 4) {
         return FALSE;
     }
 
-    int last_index = count(working_deck) - 1;
+    int last_index = count_deck(working_deck) - 1;
     int top_card = working_deck[last_index];
     int fourth_card = working_deck[last_index - 3];
 
@@ -61,7 +61,7 @@ int check_same_suit(struct Card working_deck[TOTAL_DECK]) {
 
 int game_round(struct Card unused_cards[TOTAL_DECK], struct Card working_deck[TOTAL_DECK]) {
     // TODO: Figure out how to count an array.
-    if (count(unused_cards) == 0) {
+    if (count_deck(unused_cards) == 0) {
         return FALSE;
     }
 
@@ -70,7 +70,7 @@ int game_round(struct Card unused_cards[TOTAL_DECK], struct Card working_deck[TO
     do {
         // TODO: Figure out how to grab the shifted card.
         working_deck[] = array_shift(unused_cards);
-    } while (count(working_deck) < 4 && count(unused_cards) > 0);
+    } while (count_deck(working_deck) < 4 && count_deck(unused_cards) > 0);
 
 
     // Play a round.

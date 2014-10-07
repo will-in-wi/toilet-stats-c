@@ -9,5 +9,6 @@
 void generate_deck(struct Card deck[TOTAL_DECK]);
 void format_deck(struct Card deck[TOTAL_DECK]);
 void shuffle_deck(struct Card deck[TOTAL_DECK]);
+int count_deck(struct Card deck[TOTAL_DECK]);
 
 #endif  /* INC_DECK_H */

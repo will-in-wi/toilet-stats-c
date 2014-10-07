@@ -54,3 +54,12 @@ void shuffle_deck(struct Card deck[TOTAL_DECK]) {
         deck[n] = tmp;
     }
 }
+
+int count_deck(struct Card deck[TOTAL_DECK]) {
+    int count = 0;
+    for (int i = 0; i < TOTAL_DECK; ++i) {
+        if (deck[i] != NULL) count++;
+    }
+
+    return count;
+}

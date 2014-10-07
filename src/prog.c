@@ -20,7 +20,7 @@ int main() {
         format_deck(working_deck);
     }
 
-    printf("Final count: %d\n", count(working_deck));
+    printf("Final count: %d\n", count_deck(working_deck));
 
     return 1;
 }
